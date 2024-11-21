@@ -1,0 +1,457 @@
+/* General Styles */
+.home-container {
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  font-size: 2.5em;
+  color: #ff1717;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* About Section */
+.mission-section {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #f0ebe4;
+  color: white; /* Ensure text is visible on dark backgrounds */
+}
+
+/* Slider Background */
+.slider-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align text to the top */
+  flex-direction: column;
+  padding: 210px;
+  padding-top: 20px; /* Adjust this value to move text upwards or downwards */
+  z-index: 1; /* Ensure text is on top */
+}
+
+.slider-background h2 {
+  font-size: 2.5em;
+  color: #ffd27f;
+  margin-bottom: 20px;
+}
+
+/* Slider Wrapper */
+.slider-wrapper {
+  position: relative;
+  z-index: 0; /* Place slider images below text */
+}
+
+/* Slider Items */
+.about-slider .slider-item {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Adjust based on desired height */
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+/* Slider Image (Background) */
+.about-slider .slider-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%);
+  height: auto;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Adjust Slider Image on Hover */
+.about-slider .slider-item:hover .slider-bg {
+  transform: translateY(-50px); /* Move the background image upwards on hover */
+  filter: brightness(70%);
+}
+
+/* Slider Captions */
+.slider-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-align: left;
+  z-index: 2;
+}
+
+.slider-caption h3 {
+  font-size: 2em;
+  color: #ffd27f;
+  margin-bottom: 10px;
+}
+
+.slider-caption p {
+  font-size: 1.2em;
+  color: #ddd;
+}
+
+/* Adjust Slick Dots */
+.slick-dots {
+  bottom: 10px;
+  z-index: 2;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #ffd27f; /* Custom color for slider dots */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff1717; /* Active dot color */
+}
+
+/* Image Slide Effect */
+@keyframes slide-up {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.about-slider .slider-caption {
+  animation: slide-up 1.5s ease-out;
+}
+/* Keep the slider background fixed */
+.slider-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align text to the top */
+  flex-direction: column;
+  padding: 210px;
+  padding-top: 20px; /* Adjust this value to move text upwards or downwards */
+  z-index: 1; /* Ensure text is on top */
+  overflow: hidden; /* Hide the text outside the viewable area */
+}
+
+.slider-background h2,
+.slider-background p {
+  animation: moveText 10s linear infinite; /* Add continuous animation */
+ 
+  margin: 0;
+}
+
+/* Keyframes to animate the text */
+@keyframes moveText {
+  0% {
+    transform: translateX(100%); /* Start off-screen from the right */
+  }
+  50% {
+    transform: translateX(-102%); /* Move off-screen to the left */
+  }
+  100% {
+    transform: translateX(100%); /* End back at the starting point */
+  }
+}
+
+/* Optional: Slow down the text movement or make it more interesting by adjusting the duration */
+.slider-background h2 {
+  font-size: 2.5em;
+  color: #ffd27f;
+  margin-bottom: 20px;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0); /* Move to normal position */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px); /* Fade out and move up */
+  }
+}
+slider-background h2 {
+  font-size: 2.6em;
+  color: #ffd27f;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+.slider-background p {
+  animation: moveText 10s linear infinite; /* Add continuous animation */
+  font-size: 1.6em;
+  color: #ddd;
+  font-display: bold;
+  text-decoration: double;
+  padding-left: 2cm; /* Slight shift to the left (2cm) */
+  animation: fadeInText 3s ease-in-out infinite; /* Text fading animation */
+}
+
+
+/* Features Section Enhancements */
+.features-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #f0ebe4;
+}
+
+.features-section h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-style: bold;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, #f64b4b, #ffe1e1);
+  width: 30%;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+  margin-bottom: 20px;
+}
+
+.feature-icon img {
+  width: 60px;
+  height: 60px;
+}
+
+.feature-card h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feature-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-card {
+    width: 100%;
+  }
+}
+
+
+/* Solution Section */
+.solution-section {
+  background-color: #f0ebe4;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  border-radius: 8px;
+} 
+#solimg{
+  border-radius: 12px;
+}
+
+.solution-section img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+/* Contact Section Styles */
+.contact-section {
+  background-color: #111; /* Black background for an elegant look */
+  color: #fff; /* White text for contrast */
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 50px 0;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ffd27f; /* Elegant gold tone for the heading */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Contact Information */
+.contact-info p {
+  font-size: 18px;
+  margin: 12px 0;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #bbb; /* Light gray for better readability */
+}
+
+/* Contact Form */
+.contact-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffd27f; /* Gold color for labels */
+}
+
+/* Input Fields and Textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 2px solid #444; /* Darker border for input fields */
+  font-size: 16px;
+  color: #fff; /* White text inside input fields */
+  background-color: #222; /* Dark background for input fields */
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ffd27f; /* Gold border on focus */
+  outline: none;
+  background-color: #333; /* Lighter background on focus */
+}
+
+/* Contact Button */
+.contact-btn {
+  background-color: #ffd27f; /* Gold button */
+  color: #111;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.contact-btn:hover {
+  background-color: #ffcc00; /* Slightly darker gold on hover */
+}
+
+/* Social Media Icons */
+.social-media {
+  margin-top: 40px;
+}
+
+.social-icon {
+  margin: 0 20px;
+  display: inline-block;
+}
+
+.social-icon img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+  transform: scale(1.1);
+}
+
+.social-icon:active img {
+  transform: scale(0.95);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-section,
+  .mission-section,
+  .solution-section,
+  .contact-section {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .feature-card {
+    width: 100%;
+  }
+}

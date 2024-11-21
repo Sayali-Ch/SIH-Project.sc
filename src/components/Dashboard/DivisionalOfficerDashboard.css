@@ -1,0 +1,102 @@
+/* Main container */
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #cfd9df, #e2ebf0);
+  padding: 20px;
+}
+
+/* Content section */
+.dashboard-content {
+  text-align: center;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Title styling */
+.dashboard-content h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Description styling */
+.dashboard-content p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Button container */
+.dashboard-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Button styling */
+.dashboard-btn {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 15px rgba(255, 126, 95, 0.3);
+}
+
+.dashboard-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
+  box-shadow: 0 8px 20px rgba(255, 126, 95, 0.4);
+}
+
+.dashboard-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(255, 126, 95, 0.2);
+}
+
+.popup-message
+{
+  margin-top: 0.5cm;
+  font-weight: bold;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-content h1 {
+    font-size: 2rem;
+  }
+
+  .dashboard-content p {
+    font-size: 1rem;
+  }
+
+  .dashboard-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}

@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+  }
+  
+  /* Alerts Page Container */
+  .alerts-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Header Section */
+  .alerts-header {
+    background: linear-gradient(90deg, #fe0000, #fea14f);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    width: calc(100% - 40px); /* Adjusting width for left and right spacing */
+    max-width: 1800px; /* Limiting max width for large screens */
+    border-radius: 10px;
+    margin: 0 auto 30px auto; /* Centering and adding bottom margin */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .alerts-header:hover {
+    transform: translateY(-5px);
+  }
+  
+  .alerts-header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .alerts-header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  
+  /* Form Container */
+  .alerts-form-container {
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .form-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fe0000;
+  }
+  
+  /* Form Styles */
+  .alerts-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .form-input {
+    font-size: 1rem;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    background-color: #f9fbfc;
+  }
+  
+  .form-input:focus {
+    border-color: #fe0000;
+    background-color: #eef3f8;
+    outline: none;
+    box-shadow: 0 0 5px rgba(15, 122, 222, 0.3);
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  /* Form Button - Styled like the "Send Message" button */
+.form-button {
+    background: linear-gradient(90deg, #fe0000, #fea14f);
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+  }
+  
+  .form-button:hover {
+    background: linear-gradient(90deg, #fea14f,#fe0000);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-button:active {
+    transform: scale(0.98);
+    box-shadow: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .alerts-header h1 {
+      font-size: 2.2rem;
+    }
+  
+    .form-title {
+      font-size: 1.5rem;
+    }
+  
+    .alerts-header {
+      width: calc(100% - 20px); /* Reduce width for smaller screens */
+    }
+  }
+  

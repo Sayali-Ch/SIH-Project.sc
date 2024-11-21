@@ -1,0 +1,66 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f4f9;
+  transition: all 0.3s ease;
+}
+
+.with-sidebar .content-wrapper {
+  margin-left: 250px;
+  transition: margin 0.3s ease;
+}
+
+.full-width .content-wrapper {
+  margin-left: 0;
+  width: 100%;
+}
+
+.content-wrapper {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.dashboard-header {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.line-chart {
+  flex: 2;
+  min-width: 60%;
+  height: 400px;
+}
+
+.pie-chart {
+  flex: 1;
+  min-width: 30%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    flex-direction: column;
+  }
+
+  .line-chart, .pie-chart {
+    min-width: 100%;
+    height: auto;
+  }
+}

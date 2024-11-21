@@ -1,0 +1,225 @@
+/* General container styling */
+.reports-page-container {
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+    animation: fadeIn 0.8s ease-in-out;
+    background-color: #f7f9fc; /* Light gray background for contrast */
+  }
+  
+  /* Section Titles */
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #064663; /* Your dark teal theme color */
+    font-weight: 600;
+    border-left: 5px solid #e33a1d; /* Accent border */
+    padding-left: 10px;
+  }
+  
+  /* Overview Section */
+  .overview-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .overview-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .card {
+    flex: 1;
+    padding: 25px;
+    border-radius: 12px;
+    background: linear-gradient(120deg, #e1dde6 0%, #d1d8e4 100%);
+    color: #181717;
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(120deg, #f0c5c3 0%, #f26e5f 100%);
+  }
+  
+  .card span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  
+  /* Generate New Report Section */
+  .generate-report-section {
+    margin-bottom: 2.5rem;
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .report-form {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .report-form input,
+  .report-form textarea,
+  .report-form select {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #CBD5E0;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .report-form input:focus,
+  .report-form textarea:focus,
+  .report-form select:focus {
+    border-color: #04724D;
+    box-shadow: 0 0 5px rgba(4, 114, 77, 0.3);
+  }
+  
+  .generate-button {
+    background-color: #04724D; /* Button green theme */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .generate-button:hover {
+    background-color: #1FAB89;
+    transform: scale(1.05);
+  }
+  
+  /* Reports Table Section */
+  .reports-table-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .reports-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reports-table th,
+  .reports-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #E2E8F0;
+    font-size: 1rem;
+  }
+  
+  .reports-table th {
+    background-color: #F4F4F4;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .reports-table tr:nth-child(even) {
+    background-color: #FAFAFA;
+  }
+  
+  .reports-table tr:hover {
+    background-color: #EDF2F7;
+  }
+  
+  .reports-table td {
+    color: #333;
+  }
+  
+
+  /* Form Labels */
+.form-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #064663; /* Dark teal color matching the theme */
+  margin-bottom: 5px; /* Space between label and input */
+  display: block; /* Ensures the label appears above the input */
+}
+
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Form Inputs */
+  .report-form input,
+  .report-form textarea,
+  .report-form select {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #CBD5E0;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .report-form input:focus,
+  .report-form textarea:focus,
+  .report-form select:focus {
+    border-color: #04724D;
+    box-shadow: 0 0 5px rgba(4, 114, 77, 0.3);
+  }
+  
+  /* Generate Button */
+.generate-button {
+  background: linear-gradient(to right, #fe0000, #fea14f); /* Gradient styling */
+  color: white;
+  padding: 10px 20px; /* Adjusted padding */
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase; /* Optional: makes text uppercase */
+}
+
+/* Button Hover Effect */
+.generate-button:hover {
+  background: linear-gradient(to right, #fea14f, #fe0000); /* Reverse gradient */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Active State Effect */
+.generate-button:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Centering the Button */
+.button-container {
+  text-align: center; /* Center-align the button */
+  margin-top: 20px; /* Optional: Space above the button */
+}
+
+  
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,111 @@
+.all-users-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .all-users-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .user-selection,
+  .message-section {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .user-selection label,
+  .message-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  select,
+  textarea {
+    width: 95%; /* Adjusted width for spacing */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  select:focus,
+  textarea:focus {
+    border-color: #fea14f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(254, 161, 79, 0.7);
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .button-group {
+    text-align: left; /* Buttons aligned to the left */
+    margin-top: 20px;
+  }
+  
+  .send-message-btn {
+    background: linear-gradient(to right, #fe0000, #fea14f);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: block
+  }
+  
+  .send-message-btn:hover {
+    background: linear-gradient(to right, #fea14f, #fe0000);
+    transform: scale(1.05);
+  }
+  
+  .send-message-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .back-btn {
+    background: #fe0000; /* Red color for Back button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 13px; /* 5px gap from the Send button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .back-btn:hover {
+    background: #c80000; /* Darker red on hover */
+    transform: scale(1.05);
+  }
+  
+  .back-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  }
+  
