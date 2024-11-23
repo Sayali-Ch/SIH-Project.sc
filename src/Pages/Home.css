@@ -231,7 +231,7 @@ slider-background h2 {
 .features-section {
   text-align: center;
   padding: 40px;
-  background-color: #f0ebe4;
+  background-color: #f5f5f5;
 }
 
 .features-section h2 {
@@ -251,7 +251,7 @@ slider-background h2 {
 }
 
 .feature-card {
-  background: linear-gradient(135deg, #f64b4b, #ffe1e1);
+  background: linear-gradient(135deg, #f0532b, #e1be79);
   width: 30%;
   padding: 20px;
   border-radius: 12px;
@@ -284,6 +284,30 @@ slider-background h2 {
   font-size: 1em;
   color: #666;
 }
+/* Key Features Text Animation */
+.feature-card:hover h3 {
+  animation: fadeInUp 0.6s ease-out;
+  transform: translateY(-10px);
+  color: #000000; /* Change color to red on hover */
+}
+
+.feature-card:hover p {
+  animation: fadeInUp 0.6s ease-out;
+  transform: translateY(-5px);
+  color: #333; /* Ensure good readability */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -292,21 +316,16 @@ slider-background h2 {
   }
 }
 
-@media (max-width: 480px) {
-  .feature-card {
-    width: 100%;
-  }
-}
 
 
 /* Solution Section */
-.solution-section {
+/*.solution-section {
   background-color: #f0ebe4;
   padding: 20px;
   margin: 20px 0;
   text-align: center;
-  border-radius: 8px;
-} 
+  border-radius: 6px;
+} */
 #solimg{
   border-radius: 12px;
 }
@@ -314,9 +333,119 @@ slider-background h2 {
 .solution-section img {
   max-width: 100%;
   height: auto;
-  margin-top: 20px;
+  margin-top: 10px;
   border-radius: 8px;
 }
+
+
+/* Features Section - Slide Up Animation */
+.features-container.animate-features .feature-card {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Solution Section */
+.solution-section {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.solution-section h2 {
+  font-size: 2.5em;
+  font-family:'Poppins', sans-serif;
+  color: #333;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Solution Slider */
+.solution-slider-container {
+  max-width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.solution-slider {
+  position: relative;
+}
+
+.solution-slide {
+  position: relative;
+  overflow: hidden;
+  height: 600px; /* Set a fixed height for the slides */
+}
+
+.solution-slide img,
+.solution-slide video {
+  width: 100%;
+  height: 100%; /* Ensure images and videos fit within the slide height */
+  object-fit: cover; /* Ensure content is cropped and fits within the set height */
+  border-radius: 10px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+
+
+.slick-prev:hover, .slick-next:hover {
+  color: #333; /* Slightly lighter black on hover */
+}
+
+.slick-prev::before, .slick-next::before {
+  color: #000; /* Change the default arrow icon color to black */
+}
+
+/*.solution-slide:hover img,
+.solution-slide:hover video {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}*/
+
+.slick-prev {
+  left: -30px; /* Move to the left of the slider */
+}
+
+.slick-next {
+  right: -30px; /* Move to the right of the slider */
+}
+
+
+video {
+  pointer-events: auto; /* Ensures the video is clickable */
+}
+
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .solution-slider-container {
+    max-width: 100%;
+  }
+
+  .solution-slide {
+    height: 450px; /* Smaller height for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .solution-slide {
+    height: 300px; /* Even smaller height for very small screens */
+  }
+}
+
 /* Contact Section Styles */
 .contact-section {
   background-color: #111; /* Black background for an elegant look */
@@ -441,7 +570,6 @@ slider-background h2 {
     font-size: 16px;
   }
 }
-
 @media (max-width: 480px) {
   .features-section,
   .mission-section,
